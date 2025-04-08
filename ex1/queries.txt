@@ -1,0 +1,68 @@
+#############
+## Queries ##
+#############
+
+## 1
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX : <http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#>
+
+SELECT (COUNT(DISTINCT ?class) AS ?totalClasses) WHERE {
+  ?class a owl:Class .
+}
+  
+
+## 2 
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX : <http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#>
+
+SELECT (COUNT(DISTINCT ?prop) AS ?totalProps) WHERE {
+  ?prop a owl:ObjectProperty .
+}
+  
+
+## 3
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX : <http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#>
+
+SELECT (COUNT(DISTINCT ?person) AS ?totalPersons) WHERE {
+  ?person rdf:type :Trabalhador .
+}
+
+## 4
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX : <http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#>
+
+SELECT ?nomePessoa
+WHERE {
+  ?vegetal a :Vegetal ;
+           :nome "Tomate" .
+
+  ?fazenda a :Fazenda ;
+           :cultiva ?vegetal .
+
+  ?pessoa :trabalha_na ?fazenda ;
+          :cultiva "true"^^xsd:boolean ;
+          :nome ?nomePessoa .
+}
+
+
+## 5
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX : <http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#>
+
+SELECT ?Empregadores WHERE {
+  ?fazenda a :Fazenda ;
+           :temDono ?pessoa .
+  ?pessoa :nome ?Empregadores
+}
+

@@ -1,0 +1,377 @@
+@prefix : <http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#> .
+
+<http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#cria
+:cria rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#cultiva
+:cultiva rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#produz
+:produz rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#casado_com
+:casado_com rdf:type owl:ObjectProperty ;
+            owl:inverseOf :casado_com ;
+            rdf:type owl:SymmetricProperty .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#contrata
+:contrata rdf:type owl:ObjectProperty ;
+          owl:inverseOf :trabalha_para .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#filho_de
+:filho_de rdf:type owl:ObjectProperty ;
+          owl:inverseOf :progenitor_de .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#localizada_em
+:localizada_em rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#possui
+:possui rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#progenitor_de
+:progenitor_de rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#protege
+:protege rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#temDono
+:temDono rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#trabalha_na
+:trabalha_na rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#trabalha_para
+:trabalha_para rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#troca_com
+:troca_com rdf:type owl:ObjectProperty ;
+           owl:inverseOf :troca_com ;
+           rdf:type owl:SymmetricProperty .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#vende_em
+:vende_em rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#vive_em
+:vive_em rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#vizinho
+:vizinho rdf:type owl:ObjectProperty ;
+         owl:inverseOf :vizinho ;
+         rdf:type owl:SymmetricProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#nome
+:nome rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#tipo
+:tipo rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Agricultor
+:Agricultor rdf:type owl:Class ;
+            rdfs:subClassOf :Trabalhador .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Animal
+:Animal rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Criacao
+:Criacao rdf:type owl:Class ;
+         rdfs:subClassOf :Animal .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Cultivo
+:Cultivo rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Fazenda
+:Fazenda rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Feira
+:Feira rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Fruta
+:Fruta rdf:type owl:Class ;
+       rdfs:subClassOf :Cultivo .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Guarda
+:Guarda rdf:type owl:Class ;
+        rdfs:subClassOf :Animal .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Localidade
+:Localidade rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Produto
+:Produto rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Temporario
+:Temporario rdf:type owl:Class ;
+            rdfs:subClassOf :Trabalhador .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Trabalhador
+:Trabalhador rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Vegetal
+:Vegetal rdf:type owl:Class ;
+         rdfs:subClassOf :Cultivo .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Veiculo
+:Veiculo rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Animal1
+:Animal1 rdf:type owl:NamedIndividual ,
+                  :Animal ,
+                  :Guarda ;
+         :protege :Fazenda1 ;
+         :vive_em :Localidade ;
+         :nome "Rex" ;
+         :tipo "Cão" .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Animal3
+:Animal3 rdf:type owl:NamedIndividual ,
+                  :Animal ,
+                  :Criacao ;
+         :tipo "Vaca" .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Animal4
+:Animal4 rdf:type owl:NamedIndividual ,
+                  :Animal ,
+                  :Criacao ;
+         :tipo "Porco" .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Animal5
+:Animal5 rdf:type owl:NamedIndividual ,
+                  :Animal ,
+                  :Criacao ;
+         :tipo "Galinha" .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Fazenda1
+:Fazenda1 rdf:type owl:NamedIndividual ,
+                   :Fazenda ;
+          :localizada_em :Localidade ;
+          :possui :Veiculo1 ;
+          :temDono :Pessoa1 ;
+          :nome "Fazenda da Rocinha" ;
+          :cria :Animal3 ,
+                :Animal4 ,
+                :Animal5 ;
+          :cultiva :Fruta1 ,
+                   :Fruta2 ,
+                   :Fruto3 ;
+          :produz :Produto1 .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Fazenda2
+:Fazenda2 rdf:type owl:NamedIndividual ,
+                   :Fazenda ;
+          :localizada_em :Localidade ;
+          :temDono :Pessoa5 ;
+          :nome "Fazenda da Fonte Sem Agua" ;
+          :cultiva :Vegetal1 ,
+                   :Vegetal2 ,
+                   :Vegetal3 .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Feira1
+:Feira1 rdf:type owl:NamedIndividual ,
+                 :Feira ;
+        :localizada_em :Localidade ;
+        :nome "Feira de São Jose" .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Fruta1
+:Fruta1 rdf:type owl:NamedIndividual ,
+                 :Cultivo ,
+                 :Fruta ;
+        :nome "Maça" .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Fruta2
+:Fruta2 rdf:type owl:NamedIndividual ,
+                 :Cultivo ,
+                 :Fruta ;
+        :nome "Laranja" .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Fruto3
+:Fruto3 rdf:type owl:NamedIndividual ,
+                 :Cultivo ,
+                 :Fruta ;
+        :nome "Banana" .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Localidade
+:Localidade rdf:type owl:NamedIndividual ,
+                     :Localidade ;
+            :nome "São José" .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Pessoa1
+:Pessoa1 rdf:type owl:NamedIndividual ,
+                  :Agricultor ,
+                  :Trabalhador ;
+         :casado_com :Pessoa2 ;
+         :progenitor_de :Pessoa3 ,
+                        :Pessoa4 ;
+         :trabalha_na :Fazenda1 ;
+         :troca_com :Pessoa5 ;
+         :vende_em :Feira1 ;
+         :vive_em :Localidade ;
+         :vizinho :Pessoa5 ;
+         :nome "Sr.João" ;
+         :cria "true"^^xsd:boolean ;
+         :cultiva "true"^^xsd:boolean ;
+         :produz "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Pessoa2
+:Pessoa2 rdf:type owl:NamedIndividual ,
+                  :Agricultor ,
+                  :Trabalhador ;
+         :casado_com :Pessoa1 ;
+         :progenitor_de :Pessoa3 ;
+         :trabalha_na :Fazenda1 ;
+         :vende_em :Feira1 ;
+         :vive_em :Localidade ;
+         :nome "Sra.Maria" ;
+         :cria "true"^^xsd:boolean ;
+         :cultiva "true"^^xsd:boolean ;
+         :produz "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Pessoa3
+:Pessoa3 rdf:type owl:NamedIndividual ,
+                  :Agricultor ,
+                  :Trabalhador ;
+         :filho_de :Pessoa1 ,
+                   :Pessoa2 ;
+         :trabalha_na :Fazenda1 ;
+         :vive_em :Localidade ;
+         :nome "Pedro" ;
+         :cria "true"^^xsd:boolean ;
+         :cultiva "false"^^xsd:boolean ;
+         :produz "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Pessoa4
+:Pessoa4 rdf:type owl:NamedIndividual ,
+                  :Agricultor ,
+                  :Trabalhador ;
+         :filho_de :Pessoa1 ;
+         :trabalha_na :Fazenda1 ;
+         :vive_em :Localidade ;
+         :nome "Ana" ;
+         :cria "false"^^xsd:boolean ;
+         :cultiva "false"^^xsd:boolean ;
+         :produz "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Pessoa5
+:Pessoa5 rdf:type owl:NamedIndividual ,
+                  :Agricultor ,
+                  :Trabalhador ;
+         :trabalha_na :Fazenda2 ;
+         :troca_com :Pessoa1 ;
+         :vende_em :Feira1 ;
+         :vive_em :Localidade ;
+         :vizinho :Pessoa1 ;
+         :nome "Sr.Carlos" ;
+         :cria "false"^^xsd:boolean ;
+         :cultiva "true"^^xsd:boolean ;
+         :produz "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Produto1
+:Produto1 rdf:type owl:NamedIndividual ,
+                   :Produto ;
+          :nome "Geleia" .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Vegetal1
+:Vegetal1 rdf:type owl:NamedIndividual ,
+                   :Cultivo ,
+                   :Vegetal ;
+          :nome "Tomate" .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Vegetal2
+:Vegetal2 rdf:type owl:NamedIndividual ,
+                   :Cultivo ,
+                   :Vegetal ;
+          :nome "Alface" .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Vegetal3
+:Vegetal3 rdf:type owl:NamedIndividual ,
+                   :Cultivo ,
+                   :Vegetal ;
+          :nome "Cenoura" .
+
+
+###  http://www.semanticweb.org/codemaster/ontologies/2025/3/untitled-ontology-15#Veiculo1
+:Veiculo1 rdf:type owl:NamedIndividual ,
+                   :Veiculo ;
+          :tipo "Trator" .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
